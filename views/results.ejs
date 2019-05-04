@@ -1,6 +1,15 @@
 <h1>Results Page!</h1>
 
-<%# Use the object data key to access the parsed JSON response object. %>
-<% data['Search'].forEach(movie => { %>
-  <li><%= movie.Title %></li>
-<% }) %>
+<%# Use the object data key to access the parsed JSON response body object.
+    Not sure why you have to use bracket access notation as 'Search' is a property 
+    on the response.body object (i.e. data). Bracket notation should only be needed
+    when using a variable containing a string that is the same as the property. %>
+<ul>
+  <% data['Search'].forEach(movie => { %>
+    <li>
+      <strong><%= movie.Title %></strong> - <em><%= movie.Year %></em>
+    </li>
+  <% }) %>
+</ul>
+
+<a href="/">Search again</a>

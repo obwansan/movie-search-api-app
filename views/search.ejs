@@ -1,0 +1,11 @@
+<h1>Search for a movie</h1>
+
+<%# The search query is sent, using a GET request (i.e. a query string in the URL), to results.ejs
+    You're automagically redirected to the /results page when you click Submit. %>
+<form action='./results' method='GET'>
+  <%# The value of the name attribute (i.e. 'search') becomes the key in the query string key:value pair, 
+  and the inputted string (e.g. 'harry') becomes the value, e.g. ?search=harry.
+  ?search=harry in the URL matches query: { search: 'harry' } in the request object%>
+  <input type="text" placeholder="search term" name="search">
+  <input type="submit">
+</form>
