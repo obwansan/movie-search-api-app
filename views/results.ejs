@@ -1,0 +1,6 @@
+<h1>Results Page!</h1>
+
+<%# Use the object data key to access the parsed JSON response object. %>
+<% data['Search'].forEach(movie => { %>
+  <li><%= movie.Title %></li>
+<% }) %>
